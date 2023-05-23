@@ -1,7 +1,7 @@
-
     html, body, ul, ol {
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
     
     /* Global styles */
@@ -27,7 +27,7 @@
     }
     
    /* Header */
-  header {
+    header {
       background-color: #fff;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       display: flex;
@@ -73,49 +73,61 @@
     /* End of About & Engineering Projects Header */
     
     /* Hero Section */
-    #hero {
-      background-color: #f5f5f5;
-      padding: 100px 0;
-      text-align: center;
-    }
-    
-    .hero-title {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-    
-    .hero-description {
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-    
-    .cta-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #333;
-      color: #fff;
-      border-radius: 5px;
-      text-transform: uppercase;
-      transition: background-color 0.3s ease;
-    }
-    
-    .cta-button:hover {
-      background-color: #555;
-    }
-    
-    /* About Section */
-    #about {
-      padding: 80px 0;
-      text-align: center;
-      background-color: #fff;
-    }
+#hero {
+    position: relative;
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    padding: 100px 0;
+    text-align: center;
+    background-image: url('../images/sky.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
+  
+  
+  .hero-title {
+    font-size: 50px;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hero-description {
+    font-size: 35px;
+    margin-bottom: 30px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .cta-button {
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #555;
+  }
+      
 
   /* About Section */
-  #about {
-    padding: 80px 0;
-    text-align: center;
-    background-color: #fff;
-  }
+    #about {
+        padding: 80px 0;
+        text-align: center;
+        background-color: #fff;
+    }
   
   /* Project Section */
   #project {
@@ -124,21 +136,21 @@
     background-color: #f5f5f5;
   }
   
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 30px;
-    margin-top: 40px;
-  }
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 30px;
+        margin-top: 40px;
+    }
   
-  .project-item {
-    text-align: center;
-  }
+    .project-item {
+        text-align: center;
+    }
   
-  .project-item img {
-    max-width: 100%;
-    height: auto;
-  }
+    .project-item img {
+        max-width: 100%;
+        height: auto;
+     }
   
   /* Contact Section */
   #contact {
@@ -210,14 +222,7 @@
         .container {
           padding: 0 10px;
         }
-      
-        .hero-title {
-          font-size: 28px;
-        }
-      
-        .hero-description {
-          font-size: 16px;
-        }
+
       
         .portfolio-grid {
           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -254,10 +259,10 @@
     margin-bottom: 10px;
   }
   
-  /* Additional styling as needed */
+  /* Fade in animation */
   .fade-in {
     opacity: 0;
-    animation: fadeInAnimation 1s ease-in forwards;
+    animation: fadeInAnimation 0.5s ease-in forwards;
   }
   
   @keyframes fadeInAnimation {
@@ -270,9 +275,9 @@
       transform: translateY(0);
     }
   }
+ /*End of Fade in Animation*/  
   
 /*Contact Section*/
-
 .contact-links p {
     margin-bottom: 10px;
   }
@@ -286,3 +291,4 @@
     color: #888;
   }
 /*End of Contact Section*/
+
