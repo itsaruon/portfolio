@@ -44,8 +44,8 @@
     }
     
     .logo img {
-      width: 50px; /* Adjust the width to your desired size */
-      height: 50px; /* Adjust the height to your desired size */
+      width: 50px; /* Adjust the width to desired size */
+      height: 50px; /* Adjust the height to desired size */
       border-radius: 50%; /* Make it a circle */
       background-color: #333; /* Choose a background color for the circle */
     }
@@ -72,55 +72,68 @@
     }
     /* End of About & Engineering Projects Header */
     
-    /* Hero Section */
+/* Hero Section */
 #hero {
-    position: relative;
-    height: 100vh; /* Set the height to 100% of the viewport height */
-    padding: 100px 0;
-    text-align: center;
-    background-image: url('../images/sky.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
+  position: relative;
+  height: 100vh;
+  padding: 100px 0;
+  text-align: center;
+  background-image: url('../images/sky.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInAnimation 0.5s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  
-  .hero-title {
-    font-size: 50px;
-    margin-bottom: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .hero-description {
-    font-size: 35px;
-    margin-bottom: 30px;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .cta-button {
-    position: absolute;
-    bottom: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border-radius: 5px;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #555;
-  }
-      
+}
+
+/* Text styles within the hero section */
+.hero-title {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.hero-description {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+/*Resume Button
+.cta-button {
+  display: inline-block;
+  margin-top: 150px; 
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  text-transform: capitalize;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #444;
+}
+*/
+
+
 
   /* About Section */
     #about {
@@ -181,17 +194,18 @@
   button {
     display: block;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: black;
     color: #fff;
     border: none;
     border-radius: 5px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
+  
   button:hover {
-    background-color: #555;
+    background-color: #174d26;
   }
   
   /* Footer */
