@@ -26,33 +26,23 @@
 
   <section id="hero">
     <div class="container">
-      <h1 class="hero-title">
+      <h1 class="hero-title scroll-animation">
         <span class="terminal-text">Hello World</span>
       </h1>
-      <p class="hero-description">
+      <p class="hero-description scroll-animation">
         <span class="terminal-text">Computer Science Engineering Candidate from Wayne State University</span>
       </p>
-      <a href="#project" class="cta-button">View Resume</a>
     </div>
   </section>  
   
-
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
-    <!-- Link to CSS file -->
-    <link rel="stylesheet" href="style/style.css">
-  </head>
+  
   <body>
-    <section id="about">
+    <section id="about" class="scroll-animation">
       <div class="container">
-        <h2 class="about-heading">About Me</h2>
+        <h2 class="about-heading scroll-animation">About Me</h2>
         <div class="about-content">
-        <img src="images/me.PNG" alt="About Image" class="about-image">
-          <div class="about-text">
+          <img src="images/me.PNG" alt="About Image" class="about-image scroll-animation">
+          <div class="about-text scroll-animation">
             <h3 class="about-subheading">Hi, I'm Noura!</h3>
             <p>
                 I'm a Bachelor of Computer Science Engineering candidate at Wayne State University, specializing in information technology and data analysis. With a solid technical background 
@@ -75,6 +65,10 @@
   
     <!-- JavaScript file link here -->
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+      <script>
+            AOS.init();
+      </script>
   </body>
   </html>
   
