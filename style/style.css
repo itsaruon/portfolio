@@ -84,50 +84,48 @@
     
     /* End of About & Engineering Projects Header */
     
-/* Hero Section */
-#hero {
-  position: relative;
-  height: 100vh;
-  padding: 100px 0;
-  text-align: center;
-  background-color: #141313;
-  background-size: cover;
-  background-position: center;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-/* Text styles within the hero section */
+    /* Hero Section */
+    #hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 75vh;
+    }
+  .hero-title {
+    font-size: 50px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-weight: 300;
+    opacity: 0;
+    transition: opacity 0.8s;
+    color: white; /* Set the desired font color */
+  }
 
-.hero-title {
-  font-size: 50px;
-  margin-bottom: 10px;
-  width: 100%;
-  text-align: center;
-  font-weight: 300;
-  opacity: 0; /* Set initial opacity to 0 */
-  transition: opacity 0.8s;
-}
+  .hero-description {
+    font-size: 20px;
+    margin-bottom: 30px;
+    width: 75%;
+    white-space: normal;
+    font-weight: 300;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transition: opacity 0.8s;
+    color: white; /* Set the desired font color */
+  }
 
-.hero-description {
-  font-size: 35px;
-  margin-bottom: 30px;
-  width: 75%;
-  white-space: normal;
-  font-weight: 300;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  opacity: 0; /* Set initial opacity to 0 */
-  transition: opacity 0.8s;
-}
+  #hero {
+    background-color: #141313; 
+  }
 
-.scroll-animation {
-  opacity: 1; /* Set opacity to 1 for the scrolling animation */
-}
+
+  .scroll-animation {
+    opacity: 1; /* Set opacity to 1 for the scrolling animation */
+  }
 
 
 /* Fade in animation */
@@ -179,7 +177,7 @@
 
   /* About Section */
   #about {
-    padding: 80px 0;
+    padding: 10px 0;
     text-align: center;
     background-color: #141313; /* Set the background color to black */
     color: white; /* Set the text color to white */
@@ -189,8 +187,18 @@
   .about-heading {
     text-align: center;
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-weight: 300;
+  }
+
+  .about-subheading {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 300;
+  }
+  
+  .about-subheading .name-highlight {
+    color: rgb(44, 155, 118);
   }
 
   .about-content {
@@ -215,15 +223,6 @@
     font-weight: 300;
   }
 
-  .about-subheading {
-    font-size: 24px;
-    margin-bottom: 10px;
-    font-weight: 300;
-  }
-  
-  .about-subheading .name-highlight {
-    color: rgb(44, 155, 118);
-  }
   
 
   
