@@ -3,7 +3,11 @@
       padding: 0;
       scroll-behavior: smooth;
     }
-    
+    /* Animation styles */
+.translate-y-full {
+  transform: translateY(-100%);
+}
+
     /* Global styles */
     body {
       font-family: Montserrat, sans-serif;

@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Noura's Portfolio</title>
+  <script src = "https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 
-  <!-- CSS file link here -->
+  <!-- CSS file -->
   <link rel="stylesheet" href="style/style.css">
 </head>
   <header>
@@ -25,14 +28,15 @@
   <section id="hero">
     <div class="container">
       <h1 class="hero-title scroll-animation">
-        <span class="terminal-text">Hello World</span>
+        <span class="terminal-text">
+          <h1 id="text" class="text-8xl" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);">Hello World</h1>
+        </span>
       </h1>
-      <p class="hero-description scroll-animation">
+      <!--<p class="hero-description scroll-animation">
         <span class="terminal-text">Computer Science Engineering Candidate from Wayne State University</span>
-      </p>
+      </p>-->
     </div>
-  </section>  
-  
+  </section>
   
   <body>
     <section id="about" class="scroll-animation">
@@ -65,6 +69,22 @@
       <script>
             AOS.init();
       </script>
+      <script>
+        let text = new SplitType('#text');
+        let characters = document.querySelectorAll('.char');
+      
+        for (let i = 0; i < characters.length; i++) {
+          characters[i].classList.add('translate-y-full');
+        }
+      
+        gsap.to('.char', {
+          y: 0,
+          stagger: 0.08,
+          delay: 0.1,
+          duration: 0.5, 
+        });
+      </script>
+      
   </body>
   </html>
   
@@ -109,7 +129,6 @@
   </footer>
   
 
-  <!-- JavaScript file link-->
+  <!-- JavaScript-->
   <script src="script.js"></script>
-</body>
 </html>
