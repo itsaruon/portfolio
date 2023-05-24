@@ -4,9 +4,9 @@
       scroll-behavior: smooth;
     }
     /* Animation styles */
-.translate-y-full {
-  transform: translateY(-100%);
-}
+  .translate-y-full {
+    transform: translateY(-100%);
+  }
 
     /* Global styles */
     body {
@@ -84,8 +84,6 @@
     }
     
     
-     
-    
     /* End of About & Engineering Projects Header */
     
 
@@ -95,7 +93,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 75vh;
+      height: 100vh;
     }
   .hero-title {
     font-size: 50px;
@@ -105,7 +103,7 @@
     font-weight: 300;
     opacity: 0;
     transition: opacity 0.8s;
-    color: white; /* Set the desired font color */
+    color: white; 
   }
 
   .hero-description {
@@ -119,9 +117,13 @@
     margin-right: auto;
     opacity: 0;
     transition: opacity 0.8s;
-    color: white; /* Set the desired font color */
+    color: white; 
   }
 
+  .paragraph-wrapper {
+    margin-bottom: 20px; /* Adjust the margin value to add space between paragraphs */
+  }
+  
   #hero {
     background-color: #141313; 
   }
@@ -262,20 +264,24 @@
     background-color: #141313;
     color: white;
   }
-
+  
   #contact h2 {
-    font-weight: 300; /* Set the desired font weight for the heading */
+    font-weight: 300; 
+    margin-bottom: 15px;
+    font-size: 24px;
   }
-
+  
   .contact-links p {
     margin-bottom: 10px;
   }
-
+  
   .contact-links a {
     color: white;
     text-decoration: none;
     transition: color 0.3s;
+    margin-bottom: 25px;
   }
+  
 
   .contact-links a:hover {
     color: rgb(44, 155, 118);
