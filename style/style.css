@@ -46,7 +46,7 @@
     .logo img {
       width: 50px; /* Adjust the width to desired size */
       height: 50px; /* Adjust the height to desired size */
-      border-radius: 50%; /* Make it a circle */
+      border-radius: 50%; /* Make photo circular */
       background-color: #333; /* Choose a background color for the circle */
     }
     
@@ -88,33 +88,36 @@
   justify-content: center;
 }
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInAnimation 0.5s ease-in forwards;
-}
-
-@keyframes fadeInAnimation {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Text styles within the hero section */
+
 .hero-title {
   font-size: 50px;
   margin-bottom: 10px;
+  font-family: monospace;
+  width: 100%;
+  text-align: center;
 }
 
 .hero-description {
   font-size: 35px;
   margin-bottom: 30px;
+  font-family: monospace;
+  width: 75%;
+  white-space: normal;
+  text-align: center;
+  margin-left: auto; 
+  margin-right: auto; 
 }
+
+/* Media queries for responsive layout */
+
+@media (max-width: 768px) {
+  .hero-description {
+    white-space: normal;
+    width: 90%;
+  }
+}
+
 
 /*Resume Button
 .cta-button {
@@ -136,10 +139,10 @@
 
 
   /* About Section */
-    #about {
-        padding: 80px 0;
-        text-align: center;
-        background-color: #fff;
+  #about {
+      padding: 80px 0;
+      text-align: center;
+      background-color: #fff;
     }
   
   /* Project Section */
