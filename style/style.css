@@ -201,6 +201,7 @@
     font-size: 24px;
     margin-bottom: 10px;
     font-weight: 300;
+    margin-right: 60px; /* Adjust value as needed */
   }
   
   .about-subheading .name-highlight {
@@ -211,11 +212,15 @@
     font-weight: 300;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-end;
   }
-
-
+  
+  .about-content .text-container {
+    text-align: left;
+    margin-right: 60px; /* Adjust value as needed */
+  }
+    
 
   .about-image {
     width: 200px;
@@ -228,8 +233,6 @@
     max-width: 600px;
     font-weight: 300;
   }
-
-  
 
   
   /* Project Section */
