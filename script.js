@@ -1,18 +1,19 @@
 <script>
   AOS.init();
 </script>
-
-// Scroll animation
-window.addEventListener("scroll", function() {
-    var element = document.querySelectorAll(".scroll-animation");
-    for (var i = 0; i < element.length; i++) {
-      var position = element[i].getBoundingClientRect().top;
-      var windowHeight = window.innerHeight;
   
-      if (position < windowHeight - 100) {
-        element[i].classList.add("scroll-animation");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show');
       }
-    }
+    });
   });
-  
+
+  const hiddenElements = document.querySelectorAll('.fade-in');
+  hiddenElements.forEach((el) => observer.observe(el));
+
+
   

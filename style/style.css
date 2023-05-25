@@ -8,6 +8,7 @@
     transform: translateY(-100%);
   }
 
+
     /* Global styles */
     body {
       font-family: Montserrat, sans-serif;
@@ -30,6 +31,26 @@
       color: #333;
       text-decoration: none;
     }
+
+  /* Animation styles */
+  .translate-y-full {
+    transform: translateY(-100%);
+  }
+
+  /* Fade in animation */
+  .fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .fade-in.fade-in-active {
+    opacity: 1;
+  }
+  
+  
+
+/* End of fade in animation */
+
     
    /* Header */
     header {
@@ -179,60 +200,71 @@
 }
 */
 
-
-
   /* About Section */
   #about {
     padding: 10px 0;
     text-align: center;
     background-color: #141313; /* Set the background color to black */
     color: white; /* Set the text color to white */
+
   }
 
   /* About Section Styles */
-  .about-heading {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 15px;
-    font-weight: 300;
-  }
+.about-heading {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
 
-  .about-subheading {
-    font-size: 24px;
-    margin-bottom: 10px;
-    font-weight: 300;
-    margin-right: 60px; /* Adjust value as needed */
-  }
-  
-  .about-subheading .name-highlight {
-    color: rgb(44, 155, 118);
-  }
+.about-subheading {
+  font-size: 24px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-weight: 300;
+  text-align: left;
+}
 
+.about-subheading .name-highlight {
+  color: rgb(44, 155, 118);
+}
+
+.about-content {
+  font-weight: 300;
+  display: flex;
+  font-size: 25px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+
+.about-image {
+  width: 200px;
+  height: auto;
+  border-radius: 200px; /* Increase the border-radius value for a more rounded shape */
+  margin-bottom: 30px;
+}
+
+.about-text {
+  max-width: 600px;
+  font-weight: 300;
+  text-align: left;
+  margin-left: auto; /* Adjust the value to push the text to the right side */
+  margin-right: calc(50% - 560px); /* Adjust the value to push the text further right */
+}
+
+/* Media queries for responsive layout */
+@media screen and (max-width: 768px) {
   .about-content {
-    font-weight: 300;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-end;
+    padding: 0 20px;
   }
-  
-  .about-content .text-container {
-    text-align: left;
-    margin-right: 60px; /* Adjust value as needed */
-  }
-    
 
   .about-image {
-    width: 200px;
-    height: auto;
-    border-radius: 200px; /* Increase the border-radius value for a more rounded shape */
-    margin-right: 30px;
+    width: 150px;
   }
+}
 
-  .about-text {
-    max-width: 600px;
-    font-weight: 300;
-  }
 
   
   /* Project Section */
