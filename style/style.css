@@ -38,14 +38,21 @@
   }
 
   /* Fade in animation */
-  .fade-in {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   
-  .fade-in.fade-in-active {
-    opacity: 1;
+  .animate-fade-in {
+    animation: fade-in 1s ease-in-out;
   }
+  
+
+  
   
   
 
@@ -247,12 +254,13 @@
 }
 
 .about-text {
-  max-width: 600px;
+  max-width: 50%; /* Adjust the value to your desired percentage of the available width */
   font-weight: 300;
   text-align: left;
-  margin-left: auto; /* Adjust the value to push the text to the right side */
-  margin-right: calc(50% - 560px); /* Adjust the value to push the text further right */
+  margin-left: auto; /* Move the text to the right side */
+  margin-right: 0; /* Reset the right margin */
 }
+
 
 /* Media queries for responsive layout */
 @media screen and (max-width: 768px) {
