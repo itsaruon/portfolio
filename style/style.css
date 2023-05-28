@@ -1,13 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;700;900&display=swap");
+
+/*Scroll Bar*/
+::-webkit-scrollbar {
+  background-color: #0b0b0b;
+  width: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(44, 155, 118);
+}
+ /* End of Scroll Bar */   
+    
     html, body, ul, ol {
       margin: 0;
       padding: 0;
       scroll-behavior: smooth;
     }
-    /* Animation styles */
-  .translate-y-full {
-    transform: translateY(-100%);
-  }
-
 
     /* Global styles */
     body {
@@ -33,30 +41,25 @@
     }
 
   /* Animation styles */
-  .translate-y-full {
-    transform: translateY(-100%);
+  /* Updated Smooth Fade in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
 
-  /* Fade in animation */
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .animate-fade-in {
-    animation: fade-in 1s ease-in-out;
-  }
-  
+/* Updated animation class */
+.fade-in {
+  animation: fade-in 1s ease-in-out;
+}
+
 
   
-  
-  
 
-/* End of fade in animation */
+/* End of animation effects */
 
     
    /* Header */
@@ -162,23 +165,6 @@
   }
 
 
-/* Fade in animation */
-  .fade-in {
-    opacity: 0;
-    animation: fadeInAnimation 0.5s ease-in forwards;
-  }
-  
-  @keyframes fadeInAnimation {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
- /*End of Fade in Animation*/ 
 
 /* Media queries for responsive layout */
 
@@ -340,7 +326,7 @@
     text-align: center;
     font-size: 14px;
   }
-
+  
     
   /* Media Queries */
     @media screen and (max-width: 768px) {
