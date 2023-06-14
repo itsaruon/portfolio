@@ -1,5 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;700;900&display=swap");
 
+/*Animated 1 and 0 
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.code-animation {
+  font-size: 30px;
+  color: rgb(44, 155, 118);
+  font-family: monospace;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.code-animation span {
+  display: inline-block;
+  animation: flicker 0.2s infinite;
+}
+
+.code-animation span:nth-child(2n) {
+  animation-delay: 0.1s;
+}
+/*Animated 1 and 0 */
+
 /*Scroll Bar*/
 ::-webkit-scrollbar {
   background-color: #0b0b0b;
@@ -19,7 +52,7 @@
 
     /* Global styles */
     body {
-      font-family: Montserrat, sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-weight: 300;
       line-height: 1.6;
       color: #333;
@@ -56,8 +89,6 @@
   animation: fade-in 1s ease-in-out;
 }
 
-
-  
 
 /* End of animation effects */
 
@@ -159,11 +190,52 @@
     background-color: #141313; 
   }
 
+/* Resume Button */
+/* Resume Button */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically center the button */
+  height: 100%; /* Take up the full height of the parent container */
+  margin-top: 20px;
+  text-align: center; /* Horizontally center the button */
+}
+
+.resume-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(44, 155, 118);
+  color: white;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0;
+  animation: fade-in 0.5s forwards;
+  animation-delay: 2s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.resume-button:hover {
+  background-color: rgb(15, 77, 56);
+  color: white; /* Set the text color back to white */
+  transition: background-color 0.3s, color 0.3s; /* Add transition for both background-color and color */
+}
+
+
+  /*End of Resume Button*/
 
   .scroll-animation {
     opacity: 1; /* Set opacity to 1 for the scrolling animation */
   }
-
 
 
 /* Media queries for responsive layout */
