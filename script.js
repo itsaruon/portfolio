@@ -1,5 +1,3 @@
-AOS.init();
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -35,27 +33,33 @@ setInterval(() => {
   }
 }, 200);
 
-// Animate the loading screen and hide it after the animation completes
-window.addEventListener('load', function() {
+// Loading Screen
+document.addEventListener('DOMContentLoaded', function() {
   var loadingScreen = document.getElementById('loading-screen');
   var loadingProgress = document.getElementById('loading-progress');
 
-  var progressSteps = [0, 15, 25, 35, 55, 70, 76, 88, 100]; // Define the progress steps
+  var progressSteps = [0, 35, 55, 78, 100]; // Define the progress steps
 
   var currentStep = 0;
-  var updateInterval = 175; // Time in milliseconds between each progress update
+  var updateInterval = 500; // Time in milliseconds between each progress update
 
   var updateProgress = function() {
     if (currentStep >= progressSteps.length) {
       loadingProgress.textContent = '100%';
-      gsap.to(loadingScreen, {
-        opacity: 0,
-        pointerEvents: 'none',
-        duration: 0.5,
-        onComplete: function() {
-          loadingScreen.remove();
-        }
-      });
+      setTimeout(function() {
+        gsap.to(loadingScreen, {
+          opacity: 0,
+          pointerEvents: 'none',
+          duration: 0.3,
+          onComplete: function() {
+            loadingScreen.remove();
+            hiddenElements.forEach((el) => {
+              el.style.visibility = 'visible';
+              observer.unobserve(el);
+            });
+          }
+        });
+      }, 500);
       return;
     }
 
@@ -64,6 +68,10 @@ window.addEventListener('load', function() {
     setTimeout(updateProgress, updateInterval);
   };
 
+  hiddenElements.forEach((el) => {
+    el.style.visibility = 'hidden';
+    observer.unobserve(el);
+  });
+
   updateProgress();
 });
-

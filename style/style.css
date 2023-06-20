@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;700;900&display=swap");
-
 /*Animated 1 and 0 
 @keyframes flicker {
   0% {
@@ -36,11 +34,12 @@
 /*Loading Screen*/
 #loading-screen {
   position: fixed;
+  font-family: 'Poppins', sans-serif;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #141313;
+  background-color: #161616;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,7 +52,6 @@
 
 #loading-progress {
   font-size: 24px;
-  font-weight: bold;
   color: white;
 }
 
@@ -63,7 +61,7 @@
 
 /*Scroll Bar*/
 ::-webkit-scrollbar {
-  background-color: #0b0b0b;
+  background-color: #090909;
   width: 0.3rem;
 }
 
@@ -80,7 +78,7 @@
 
     /* Global styles */
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Heebo', sans-serif;
       font-weight: 300;
       line-height: 1.6;
       color: #333;
@@ -123,7 +121,7 @@
     
    /* Header */
     header {
-      background-color: #141313;
+      background-color: #161616;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       display: flex;
       justify-content: center;
@@ -148,7 +146,7 @@
     /* About & Engineering Projects Header */
     .menu {
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       margin-top: 10px;
       list-style-type: none;
       padding: 0;
@@ -177,32 +175,45 @@
     /* End of About & Engineering Projects Header */
     
 
+    /*Split page 2 sections - left & right*/
+    .left-section {
+      width: 50%;
+      float: left;
+    }
+    
+    .right-section {
+      width: 50%;
+      float: right;
+    }    
+    /*/
+
     /* Hero Section */
     #hero {
       display: flex;
+      font-family: 'Heebo', sans-serif;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      justify-content: left;
+      text-align: left;
       height: 100vh;
+      background-color: #161616; 
     }
+
   .hero-title {
-    font-size: 50px;
+    font-size: 65px;
     margin-bottom: 10px;
     width: 100%;
-    text-align: center;
-    font-weight: 300;
+    font-weight: 550;
     opacity: 0;
     transition: opacity 0.8s;
     color: white; 
   }
 
   .hero-description {
-    font-size: 20px;
+    font-size: 26px;
     margin-bottom: 30px;
     width: 75%;
     white-space: normal;
-    font-weight: 300;
-    text-align: center;
+    font-weight: 550;
     margin-left: auto;
     margin-right: auto;
     opacity: 0;
@@ -211,14 +222,11 @@
   }
 
   .paragraph-wrapper {
-    margin-bottom: 20px; /* Adjust the margin value to add space between paragraphs */
+    margin-bottom: 30px; /* Adjust the margin value to add space between paragraphs */
   }
   
-  #hero {
-    background-color: #141313; 
-  }
 
-/* Resume Button */
+
 /* Resume Button */
 .button-container {
   display: flex;
@@ -231,8 +239,8 @@
 
 .resume-button {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: rgb(44, 155, 118);
+  padding: 5px 10px;
+  background-color: rgb(140, 147, 145);
   color: white;
   border-radius: 5px;
   text-transform: capitalize;
@@ -241,7 +249,9 @@
   opacity: 0;
   animation: fade-in 0.5s forwards;
   animation-delay: 2s;
+  font-size: 14px; 
 }
+
 
 @keyframes fade-in {
   from {
@@ -257,9 +267,7 @@
   color: white; /* Set the text color back to white */
   transition: background-color 0.3s, color 0.3s; /* Add transition for both background-color and color */
 }
-
-
-  /*End of Resume Button*/
+/*End of Resume Button*/
 
   .scroll-animation {
     opacity: 1; /* Set opacity to 1 for the scrolling animation */
@@ -297,7 +305,7 @@
   #about {
     padding: 10px 0;
     text-align: center;
-    background-color: #141313; /* Set the background color to black */
+    background-color: #161616; /* Set the background color to black */
     color: white; /* Set the text color to white */
 
   }
@@ -390,7 +398,7 @@
   #contact {
     padding: 80px 0;
     text-align: center;
-    background-color: #141313;
+    background-color: #161616;
     color: white;
   }
   
@@ -419,7 +427,7 @@
 
   /* Footer */
   footer {
-    background-color: #141313;
+    background-color: #161616;
     color: #fff;
     padding: 20px 0;
     font-weight: 300;
