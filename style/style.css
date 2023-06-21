@@ -143,33 +143,40 @@
       background-color: #333; /* Choose a background color for the circle */
     }
     
-    /* About & Engineering Projects Header */
-    .menu {
-      display: flex;
-      justify-content: flex-end;
-      margin-top: 10px;
-      list-style-type: none;
-      padding: 0;
-    }
-    
-    .menu li {
-      margin-right: 20px;
-    }
-    
-    .menu li:last-child {
-      margin-right: 0;
-    }
-    
-    .menu a {
-      text-decoration: none;
-      color: #ffffff;
-      
-      transition: color 0.3s;
-    }
-    
-    .menu a:hover {
-      color: rgb(44, 155, 118);;
-    }
+ /* About & Engineering Projects Header */
+ #menu {
+  top: 20%;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+  padding: 30px 40px; /* Adjust the padding values as needed */
+  max-width: 50%; 
+}
+
+.menu li {
+  margin-left: 900px;
+}
+
+.menu li:first-child {
+  margin-right: auto;
+}
+
+
+.menu a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: rgb(44, 155, 118);
+}
+
+
+
     
     
     /* End of About & Engineering Projects Header */
@@ -178,14 +185,21 @@
     /*Split page 2 sections - left & right*/
     .left-section {
       width: 50%;
-      float: left;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     
     .right-section {
       width: 50%;
       float: right;
+      overflow-y: scroll; /* Enable vertical scrolling */
+      display: flex; /* Add flex display to align items */
+      align-items: flex-start; /* Align items to the top */
     }    
+
     /*/
+    
 
     /* Hero Section */
     #hero {
@@ -194,12 +208,15 @@
       flex-direction: column;
       justify-content: left;
       text-align: left;
-      height: 100vh;
-      background-color: #161616; 
+      height: 20vh;
+      background-color: #161616;
+      padding: 30px; /* Add padding for better spacing */
+      box-sizing: border-box; /* Include padding in the height calculation */
     }
 
   .hero-title {
-    font-size: 65px;
+    font-size: 75px;
+    white-space: nowrap;
     margin-bottom: 10px;
     width: 100%;
     font-weight: 550;
@@ -210,15 +227,27 @@
 
   .hero-description {
     font-size: 26px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     width: 75%;
     white-space: normal;
-    font-weight: 550;
+    font-weight: 520;
     margin-left: auto;
     margin-right: auto;
     opacity: 0;
     transition: opacity 0.8s;
     color: white; 
+  }
+
+  .hero-about{
+    color: rgb(150, 144, 144);
+    font-size: 23px;
+    max-width: 50%; 
+    font-weight: 300;
+    text-align: left;
+    margin-right: auto; /* Move the text to the right side */
+    margin-left: 0; /* Reset the right margin */
+    margin-bottom: 30px;
+
   }
 
   .paragraph-wrapper {
@@ -233,7 +262,7 @@
   justify-content: center;
   align-items: center; /* Vertically center the button */
   height: 100%; /* Take up the full height of the parent container */
-  margin-top: 20px;
+  margin-top: 100px;
   text-align: center; /* Horizontally center the button */
 }
 
@@ -373,7 +402,7 @@
   #project {
     padding: 80px 0;
     text-align: center;
-    background-color: #f5f5f5;
+    background-color: #161616;
   }
   
     .project-grid {
