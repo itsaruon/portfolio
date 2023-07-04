@@ -183,13 +183,6 @@
     
 
     /*Split page 2 sections - left & right*/
-    .left-section {
-      width: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
     .right-section {
       width: 50%;
       float: right;
@@ -197,7 +190,6 @@
       display: flex; /* Add flex display to align items */
       align-items: flex-start; /* Align items to the top */
     }    
-
     /*/
     
 
